@@ -1,61 +1,59 @@
-## Master AI Agentic Engineering -  build autonomous AI Agents
+## Mistrzostwo w agentowym inżynierii AI - buduj autonomiczne agenty AI
 
-### 6 week journey to code and deploy AI Agents with OpenAI Agents SDK, CrewAI, LangGraph, Google ADK, Pydantic AI and MCP
+### 6-tygodniowa podróż przez kodowanie i wdrażanie agentów AI z użyciem OpenAI Agents SDK, CrewAI, LangGraph, Google ADK, Pydantic AI i MCP
 
-![Autonomous Agent](assets/agentic.jpg)
+_Jeśli oglądasz to w Cursorze, kliknij prawym przyciskiem na nazwę pliku w Explorerze po lewej stronie i wybierz "Open preview", aby zobaczyć sformatowaną wersję._
 
-_If you're looking at this in Cursor, please right click on the filename in the Explorer on the left, and select "Open preview", to view the formatted version._
+Nie mogę się doczekać, żeby Cię powitać! To początek Twojej 6-tygodniowej przygody w potężnym, zdumiewającym i często surrealistycznym świecie Agentic AI.
 
-I couldn't be more excited to welcome you! This is the start of your 6 week adventure into the powerful, astonishing and often surreal world of Agentic AI.
+### To odświeżona wersja z lata 2026
 
-### This is the refreshed version from Summer 2026
+Zawiera w pełni odświeżoną treść z najnowszymi narzędziami, modelami i technikami. Odpowiedzi na najczęstsze pytania:
+[Co zmieniło się w aktualizacji?](https://edwarddonner.com/avatar?q=67)
+[Dlaczego doszło do aktualizacji?](https://edwarddonner.com/avatar?q=65)
+[Byłem w trakcie kursu - jak zaktualizować mój kod?](https://edwarddonner.com/avatar?q=66)
 
-This has fully refreshed content with the latest tools, models and techniques. Answers to common questions:  
-[What changed in the upgrade?](https://edwarddonner.com/avatar?q=67)  
-[Why was there an upgrade?](https://edwarddonner.com/avatar?q=65)  
-[I was in the middle of the course - how do I upgrade my code](https://edwarddonner.com/avatar?q=66)  
+### Odpowiedzi na najczęstsze pytania
 
-### Answers to the most common questions
+[Mój Cursor wygląda inaczej niż Twój (nowy ekran powitalny)](https://edwarddonner.com/avatar?q=54)
+[Czy mogę użyć Gemini lub darmowych modeli zamiast OpenAI? Tak!](https://edwarddonner.com/avatar?q=8)
+[Gdzie są materiały do kursu](https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/)
+[Jak ten kurs ma się do innych moich kursów?](https://edwarddonner.com/curriculum)
+[Czy mogę wziąć ten kurs bez doświadczenia w programowaniu?](https://edwarddonner.com/avatar?q=2)
+[Jaką pracę mogę dostać po ukończeniu tego kursu?](https://edwarddonner.com/avatar?q=3)
 
-[My Cursor looks different to yours (new splash screen)](https://edwarddonner.com/avatar?q=54)  
-[Can I use Gemini or free models instead of OpenAI Yes!](https://edwarddonner.com/avatar?q=8)  
-[Where are the course resources](https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/)   
-[How does this course fit in with your others?](https://edwarddonner.com/curriculum)  
-[Can I take this course with no programming background?](https://edwarddonner.com/avatar?q=2)  
-[What job can I get after taking this course?](https://edwarddonner.com/avatar?q=3)  
+### Zanim zaczniesz
 
-### Before you begin
+Jestem tu, żeby pomóc Ci odnieść sukces! Odezwij się, jeśli mogę pomóc - na platformie albo bezpośrednio mailem (ed@edwarddonner.com). Zawsze warto połączyć się z ludźmi na LinkedIn, żeby budować społeczność - znajdziesz mnie tutaj:
+https://www.linkedin.com/in/eddonner/
 
-I'm here to help you be most successful! Please do reach out if I can help, either in the platform or by emailing me direct (ed@edwarddonner.com). It's always great to connect with people on LinkedIn to build up the community - you'll find me here:  
-https://www.linkedin.com/in/eddonner/  
-
-And my YouTube channel has many supplemental videos to add to the course; you'll find it here:  
+A na moim kanale YouTube znajdziesz wiele dodatkowych filmów uzupełniających kurs:
 https://youtube.com/@edward.donner
 
-### The not-so-dreaded setup instructions
+### Nie tak straszne instrukcje konfiguracji
 
-Perhaps famous last words: but I really, truly hope that I've put together an environment that will be not too horrific to set up!
+Może to sławne słynne ostatnie słowa, ale naprawdę mam nadzieję, że przygotowałem środowisko, którego konfiguracja nie będzie zbyt koszmarna!
 
-- Windows people, your instructions are [here](setup/SETUP-PC.md)
-- Mac people, yours are [here](setup/SETUP-mac.md)
-- Linux people, yours are [here](setup/SETUP-linux.md)
+- Instrukcje dla Windows są [tutaj](setup/SETUP-PC.md)
+- Instrukcje dla Mac są [tutaj](setup/SETUP-mac.md)
+- Instrukcje dla Linux są [tutaj](setup/SETUP-linux.md)
 
-Any problems, please do contact me.
+W razie jakichkolwiek problemów, proszę o kontakt.
 
-### Super useful resources
+### Bardzo przydatne zasoby
 
-- The course [resources](https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/) with videos
-- Many essential guides in the [guides](guides/01_intro.ipynb) section
-- My [Avatar](https://edwarddonner.com/avatar) that can answer all common questions
+- [Materiały do kursu](https://edwarddonner.com/2025/04/21/the-complete-agentic-ai-engineering-course/) z filmami
+- Wiele kluczowych przewodników w sekcji [guides](guides/01_intro.ipynb)
+- Mój [Avatar](https://edwarddonner.com/avatar), który odpowie na wszystkie najczęstsze pytania
 
-### API costs - please read me!
+### Koszty API - koniecznie przeczytaj!
 
-This course does involve making calls to OpenAI and other frontier models, requiring an API key and a small spend, which we set up in the SETUP instructions. If you'd prefer not to spend on API calls, there are cheaper alternatives like DeepSeek and free alternatives like using Ollama!
+Ten kurs wiąże się z wykonywaniem wywołań do OpenAI i innych zaawansowanych modeli, co wymaga klucza API i niewielkich wydatków, które konfigurujemy w instrukcjach SETUP. Jeśli wolisz nie wydawać na wywołania API, istnieją tańsze alternatywy jak DeepSeek i darmowe jak Ollama!
 
-Details are [here](guides/09_ai_apis_and_ollama.ipynb).
+Szczegóły są [tutaj](guides/09_ai_apis_and_ollama.ipynb).
 
-Be sure to monitor your API costs to ensure you are totally happy with any spend. For OpenAI, the dashboard is [here](https://platform.openai.com/usage).
+Koniecznie monitoruj swoje koszty API, żeby mieć pewność, że jesteś w pełni zadowolony z wydatków. Dla OpenAI panel jest [tutaj](https://platform.openai.com/usage).
 
-### ABOVE ALL ELSE -
+### PONAD WSZYSTKO -
 
-Be sure to have fun with the course! You could not have picked a better time to be learning about Agentic AI. I hope you enjoy every single minute! And if you get stuck at any point - [contact me](https://www.linkedin.com/in/eddonner/).
+Koniecznie baw się dobrze podczas kursu! Nie mogłeś wybrać lepszego momentu na naukę Agentic AI. Mam nadzieję, że każda minuta sprawi Ci radość! A jeśli w którymś momencie utkniesz - [skontaktuj się ze mną](https://www.linkedin.com/in/eddonner/).
