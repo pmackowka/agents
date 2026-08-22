@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Co to jest
 
-Materiały kursu "Master AI Agentic Engineering" Eda Donnera — 6 tygodni labów budujących autonomiczne agenty. To prywatny fork (`origin` → `pmackowka/Agents`); upstream to `ed-donner/agents`. Nie jest to aplikacja produkcyjna: każdy folder tygodnia to osobny, samodzielny projekt dydaktyczny.
+Materiały kursu "Master AI Agentic Engineering" Eda Donnera — 6 tygodni labów budujących autonomiczne agenty. Nie jest to aplikacja produkcyjna: każdy folder tygodnia to osobny, samodzielny projekt dydaktyczny.
 
 ## Środowisko i komendy
 
@@ -68,6 +68,22 @@ Każdy dzień tygodnia 5 ma `SWAP_AI.md` z gotowym przepisem na innego dostawcę
 
 ### Klucze i sekrety
 Jeden `.env` w katalogu głównym repo, wczytywany wszędzie przez `load_dotenv(override=True)`. `.cursorignore` zawiera tylko `.env`. Wymagany minimalnie `OPENAI_API_KEY`; opcjonalnie `GOOGLE_API_KEY`/`GEMINI_API_KEY`, `ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `OPENROUTER_API_KEY`, `TAVILY_API_KEY`, `MASSIVE_API_KEY`, Pushover, SMTP.
+
+## Git remotes i plan PR-a do instruktora
+
+Repo powstało jako `gh repo create --source=.` z historią `ed-donner/agents`, **nie** jako GitHub Fork — `gh api repos/pmackowka/Agents --jq .fork` zwraca `false`. To ma konsekwencje dla wysyłki PR-a.
+
+- `origin` → `pmackowka/Agents` (prywatne). Codzienna praca, commity, push — bez ograniczeń, pełny zapis.
+- `upstream` → `ed-donner/agents` (publiczne, instruktora). Tylko odbiór: `git fetch upstream && git merge upstream/main`. Brak prawa zapisu, nie próbuj tam pushować.
+- Wielkość liter w nazwie repo (`Agents` vs `agents`) nie ma znaczenia — GitHub jest case-insensitive dla URL-i repo.
+
+**Cel końcowy kursu wymaga wysłania PR-a do `ed-donner/agents`** (zaliczenie/certyfikat). Ponieważ `origin` nie jest zarejestrowanym forkiem, GitHub nie pozwoli otworzyć PR-a bezpośrednio z niego — trzeba dopiero w tym celu:
+1. `gh repo fork ed-donner/agents --remote=true --remote-name=pr-fork` — tworzy prawdziwy, **publiczny** fork (GitHub nie oferuje prywatnych forków publicznych repo poza Enterprise) i dodaje go jako trzeci remote.
+2. Push brancha z rozwiązaniem (docelowo tylko zmiany w `community_contributions/`, zgodnie z regułami PR w `guides/03_git_and_github.ipynb`) na `pr-fork`.
+3. `gh pr create --repo ed-donner/agents`.
+4. Remote `pr-fork` można potem usunąć, żeby wrócić do układu 2-remote'owego.
+
+Nie zakładaj tego trzeciego remote'a przy zwykłej pracy — tylko w momencie faktycznej wysyłki PR-a.
 
 ## Konwencje repo
 
