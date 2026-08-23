@@ -88,5 +88,6 @@ Nie zakładaj tego trzeciego remote'a przy zwykłej pracy — tylko w momencie f
 ## Konwencje repo
 
 - `community_contributions/` w każdym tygodniu — tam trafiają prace kursantów. Kod kursu tam nie mieszka; przy szukaniu wzorców referencyjnych ten katalog zwykle pomijaj.
-- `guides/` — 12 notebooków wprowadzających. Każdy ma polskie tłumaczenie `NN_nazwa.pl.md` (tekst po polsku, bloki kodu w oryginale). Zmieniając notebook, zaktualizuj też odpowiednik `.pl.md`.
+- `guides/` (12 notebooków) i `1_foundations/` (laby 1-5) mają polskie kopie `NN_nazwa.pl.ipynb` / `N_lab.pl.ipynb` — pełne notatniki, nie osobne pliki markdown (wcześniejsze `.pl.md` zostały usunięte i zastąpione). Tłumaczone jest wszystko: markdown, komentarze w kodzie i stringi-prompty przekazywane do modelu; sama składnia kodu (nazwy zmiennych, wywołania API) zostaje bez zmian. Zmieniając oryginalny notebook, zaktualizuj też odpowiednik `.pl.ipynb`.
+- Osobiste kopie `1_foundations/*.pl.ipynb` bywają dodatkowo przerobione z OpenAI SDK na natywne SDK Anthropic — Piotr używa Claude, nie OpenAI, do własnej pracy nad kursem. Do tej podmiany służy project-scoped skill `.claude/skills/swap/`, do dopisywania przykładowych rozwiązań ćwiczeń w tych labach — skill `.claude/skills/solve/`. Nie myl tych plików z materiałem referencyjnym: oryginalne `.ipynb` (bez `.pl`) to niezmieniony kod instruktora na OpenAI i taki ma zostać.
 - Do wypuszczenia PR-a na upstream obowiązują reguły z `guides/03_git_and_github.ipynb`: zmiany wyłącznie w `community_contributions`, wyczyszczone outputy notebooków, <2000 linii.
