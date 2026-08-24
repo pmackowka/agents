@@ -18,6 +18,8 @@ Zmieniaj wyłącznie komórki kodu (importy, inicjalizację klienta, wywołania 
 
 Komentarze wewnątrz komórek kodu (linie zaczynające się od `#`) aktualizuj tam, gdzie po zmianie kodu stałyby się nieprawdziwe — np. komentarz nazywający konkretny model GPT trzeba poprawić, skoro kod poniżej wywołuje teraz model Claude. Te notatniki są dwujęzyczne: markdown jest już po polsku (to kopie `.pl.ipynb` angielskich oryginałów, zobacz `CLAUDE.md`), a komentarze w kodzie idą za ogólną konwencją repo „kod i nazwy po angielsku, komentarze po polsku” — pisz komentarze po polsku.
 
+**Nigdy nie dokańczaj ani nie rozwiązuj komórek-ćwiczeń z celowo niepełnym kodem** (np. `response = ` bez reszty linii — szkic pod komórką markdown "Ćwiczenie"/"Exercise", patrz `## Weryfikacja po edycji` niżej) — nawet jeśli odwołują się do starego providera (OpenAI) i wyglądają jak coś do „zaswapowania”. Zostaw je dokładnie tak niepełne, jak były. Pisanie działającego rozwiązania takiej komórki to zadanie skilla `solve`, wywoływanego osobno i świadomie — nie efekt uboczny swapu. Realny incydent z sesji referencyjnej: przy wywołaniu `/swap` model dopisał pełne, działające rozwiązanie ćwiczenia zamiast zostawić je niepełnym — to błąd, nie miało tak być. Jedyny dozwolony dotyk takiej komórki: aktualizacja komentarza, jeśli literalnie nazywa starego providera (patrz reguła o komentarzach niżej) — bez zmiany samej (nie)działającej logiki kodu.
+
 To samo dotyczy tekstu wewnątrz stringów wysyłanych do modelu — patrz pierwszy punkt w „Konwencje konwersji specyficzne dla tego repo” niżej (**„Tłumacz WSZYSTKIE prompty...”**). To jedna z łatwiej gubionych reguł tego skilla — sprawdź ją jawnie przy każdym pliku, nie tylko przy pierwszym przejściu.
 
 ## Konwencje konwersji specyficzne dla tego repo
@@ -93,7 +95,7 @@ for i, c in enumerate(nb['cells']):
             print(f'cell idx {i}: SYNTAX ERROR: {e}')
 ```
 
-Komórki-ćwiczenia z celowo niepełnym kodem (np. `response =` bez dokończenia) będą rzucać `SyntaxError` — to oczekiwane, nie traktuj tego jako błąd konwersji.
+Komórki-ćwiczenia z celowo niepełnym kodem (np. `response =` bez dokończenia) będą rzucać `SyntaxError` — to oczekiwane, nie traktuj tego jako błąd konwersji. Nie dokańczaj ich ani nie pisz do nich rozwiązania — patrz zakaz w `## Zakres edycji: tylko komórki kodu` wyżej. `SyntaxError` w takiej komórce po edycji jest sygnałem, że wszystko poszło zgodnie z planem, nie że coś trzeba naprawić.
 
 ## Zakres pracy
 
