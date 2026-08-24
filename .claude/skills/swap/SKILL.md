@@ -1,6 +1,7 @@
 ---
 name: swap
 description: Przerabia kod w notatnikach tego kursu (Ed Donner "Master AI Agentic Engineering") z OpenAI Python SDK na natywne SDK Anthropic — ta sama logika, inny dostawca. Użyj zawsze, gdy Piotr prosi o "przerobienie"/"podmianę"/"swap" jakiegoś pliku labu (np. `1_foundations/*.pl.ipynb`, docelowo też kolejne tygodnie) na Anthropic/Claude, albo pyta czy dany notatnik już korzysta z Claude. Nie triggeruj przy ogólnych pytaniach o API Anthropic bez kontekstu konwersji pliku — do tego służy skill `claude-api`.
+disable-model-invocation: true
 ---
 
 # Swap — OpenAI → Anthropic w notatnikach kursu

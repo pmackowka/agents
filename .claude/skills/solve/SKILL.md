@@ -1,6 +1,7 @@
 ---
 name: solve
 description: Dopisuje przykładowe, działające rozwiązanie ćwiczenia (komórka markdown "Ćwiczenie"/"Exercise" + zwykle niepełny szkic kodu pod nią) w notatnikach tego kursu (Ed Donner "Master AI Agentic Engineering"), np. `1_foundations/*.pl.ipynb`. Użyj zawsze, gdy Piotr prosi o "zrobienie"/"rozwiązanie"/"uzupełnienie" ćwiczenia w konkretnym pliku labu, o dopisanie przykładowej odpowiedzi pod ćwiczeniem, albo pyta czy dany plik ma już rozwiązanie zadania. Nie triggeruj przy podmianie dostawcy API (OpenAI→Anthropic) — do tego służy skill `swap`, choć oba często idą w parze (najpierw swap całego pliku, potem solve dla ćwiczenia w nim).
+disable-model-invocation: true
 ---
 
 # Solve — przykładowe rozwiązania ćwiczeń w labach
