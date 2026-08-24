@@ -72,6 +72,10 @@ Kontynuacja rozmowy z zachowaniem rozumowania (multi-turn): dołóż odpowiedź 
 
 Streaming: dodaj `"stream": True` do body i iteruj po `response.iter_lines()` — nieistotne dla zwykłej, jednorazowej komórki-konkurenta.
 
+**Zawsze sprawdzaj `"choices" in response.json()` przed indeksowaniem, nigdy nie indeksuj na sztywno.** Błąd z OpenRoutera przychodzi jako HTTP 200 z ciałem `{"error": {...}}`, nie jako wyjątek — surowe `response.json()["choices"][0]["message"]` bez sprawdzenia daje nieczytelny `KeyError: 'choices'` zamiast realnego powodu. Zamiast tego: `data = response.json(); if "choices" not in data: raise RuntimeError(f"OpenRouter zwrócił błąd (HTTP {response.status_code}): {data}")`.
+
+**Modele `:free` na OpenRouterze dzielą wspólną pulę requestów u dostawcy pod spodem** (np. Google AI Studio dla Gemma) — realny błąd z sesji referencyjnej: `google/gemma-4-26b-a4b-it:free` zwrócił `HTTP 429 "temporarily rate-limited upstream"` mimo poprawnego klucza, poprawnego ID modelu i poprawnego kodu — zdiagnozowane odpaleniem gołego curla z kluczem z `.env` (Bash ma zablokowany bezpośredni odczyt `.env`, więc Piotr sam odpalił komendę przez `!` i wkleił output). To nie błąd kodu, tylko przeciążenie darmowej puli — dodaj krótki retry (2-3 próby, kilka sekund sleep) na `error.code == 429`, zamiast traktować to jako coś do naprawienia w logice requestu.
+
 ## Weryfikacja po edycji
 
 Zanim uznasz konwersję za skończoną, sprawdź, że notatnik jest nadal poprawny: ta sama liczba komórek co przed edycją, JSON się parsuje, a źródło każdej edytowanej komórki kodu przechodzi `ast.parse()` (sprawdzenie składni Pythona). Przykład takiej walidacji z sesji referencyjnej:
