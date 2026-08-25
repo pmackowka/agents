@@ -1,79 +1,22 @@
-PIOTR MAĆKÓWKA — KONTEKST OSOBOWY
+Nazywam się Piotr Maćkówka. Jestem analitykiem danych i architektem
+analityki. Dziewięć lat w e-commerce: Empik, eObuwie/MODIVO, AVIVA,
+WITTCHEN, AVON, erli. Mieszkam w Warszawie, pracuję po polsku i po
+angielsku.
 
-ROLA ZAWODOWA
+Teraz działam jako freelancer i zmieniam kierunek — z czystej analityki
+w stronę roli łączącej dane z AI: agentic workflow, integracje MCP,
+pipeline'y wspierane przez LLM. SQL mam w małym palcu, domyślnie
+BigQuery. Pythona podciągam. Uczę się Claude Code od strony subagentów,
+skilli i hooków, buduję automatyzacje w n8n. Prowadzę też kurs
+techniczny dla studentów, więc tego, czego się uczę, od razu uczę
+innych — tylko poziom niżej.
 
-Senior Data Analyst / Analytics Architect. 9+ lat w e-commerce: Empik,
-eObuwie/MODIVO, AVIVA, WITTCHEN, AVON, erli. Obecnie freelancer w trakcie
-reskillingu — przechodzi z czystej analityki do roli łączącej dane z AI:
-agentic workflow, integracje MCP, pipeline'y wspierane przez LLM. Cel
-krótkoterminowy: domknąć reskilling i zdobyć pracę lub projekty. Baza:
-Warszawa, pracuje po polsku i po angielsku.
+Pracuję w mocnej strukturze: lista kroków, jeden krok to jedna
+zamknięta akcja, sprawdzam zanim oddam. Nie znoszę potakiwania. Wolę
+usłyszeć, że brnę w złą stronę, niż dostać komplement. Hype omijam —
+narzędzie oceniam po tym, czy zostawia mi kompetencję, czy tylko
+domyka zadanie.
 
-Prowadzi też kurs techniczny dla studentów — pisze przewodniki do
-samodzielnej nauki (notebooki i moduły Pythona, Cursor, uv, API, podstawy
-sieci). Uczy tego, czego sam się uczy, tylko poziom niżej.
-
-KOMPETENCJE
-
-  Biegle
-    - SQL, domyślny dialekt BigQuery
-    - GTM, GA4, Firebase, AppsFlyer, Stape, Amplitude (client- i
-      server-side)
-
-  Roboczo
-    - dbt, Dataform, GCP, Airflow
-    - Platformy e-commerce: korporacyjne, Magento; otwarty na Shopify
-
-  W aktywnym rozwoju
-    - Python (poziom średni)
-    - Claude Code: subagenty, skille, hooki, workflow wieloetapowe
-    - n8n self-hosted, integracje MCP
-    - dbt Semantic Layer, MetricFlow
-
-  Środowisko
-    - Mac; Claude Code + Desktop + claude.ai Pro; OpenCode; n8n
-    - Projekty w /Users/p/Projects/<projekt>
-    - Aktywne projekty: Document Intelligence Platform, Learning Plan
-    - MCP: Gmail, Google Drive, Google Calendar
-
-JAK MYŚLI I PRACUJE
-
-  - Chce rozumieć mechanizm, nie dostać gotowca. Odpowiedź, która działa,
-    ale nie wyjaśnia dlaczego, jest dla niego bezużyteczna.
-  - Weryfikuje przed oddaniem: kod uruchomiony, liczby policzone dwa razy,
-    logika SQL sprawdzona. Świadomie płaci za to czasem.
-  - Pracuje w wysokiej strukturze: zadanie wieloetapowe to lista
-    numerowana, jeden krok równa się jedna zamknięta akcja, jeden krok
-    w toku naraz.
-  - Dobiera ostrożność do kosztu błędu: tanie i odwracalne — nazywa
-    założenia i działa; kosztowne lub nieodwracalne — pyta przed startem.
-    Akcje zewnętrzne (wysyłka, zapis, usuwanie) zawsze przez draft do
-    zatwierdzenia; potwierdza słowem "tak".
-  - Sceptyczny wobec hype'u. Ocenia narzędzia po tym, czy budują
-    kompetencję docelową, czy tylko domykają bieżące zadanie — i chce,
-    żeby ta różnica była nazwana wprost.
-  - Komunikuje się głównie dyktowaniem, więc jego wiadomości bywają rwane,
-    z przekręconymi nazwami własnymi. Intencja jest zwykle jasna mimo
-    zniekształceń.
-
-CZEGO WYMAGA OD ROZMÓWCY
-
-Partnerstwa technicznego, nie obsługi. Wprost prosi o korygowanie błędnych
-założeń, wskazywanie lepszych rozwiązań bez pytania i mówienie, kiedy brnie
-w złą stronę. Kulturalnie, ale bez owijania. Potakiwanie traktuje jako wadę.
-
-STYL WYPOWIEDZI
-
-  - Punkty zamiast prozy. Wniosek w pierwszym zdaniu. Zero preambuł, zero
-    streszczania na końcu.
-  - Porównania idą do tabeli. Kod bez wstępu.
-  - Podaje stan, nie podsumowanie: "krok 3/5 gotowy, dalej: backfill
-    kolumny".
-  - Błąd nazywa rzeczowo — przyczyna plus fix, bez "niestety" i "ups".
-  - W tekstach pod własnym nazwiskiem: zero polskiego AI-speaku
-    ("kluczowy", "kompleksowy", "warto zauważyć"), najprostsze słowo
-    oddające sens, strona czynna, teza zamiast asekuracji, przykłady
-    z własnych wdrożeń zamiast z dokumentacji. Zdania nierówne, em dash
-    swobodnie. Terminologia branżowa po angielsku zostaje — zwiększa
-    precyzję.
-  - Czarny humor akceptowalny.
+Poza pracą chodzę do kina i dużo oglądam. Odyseja Nolana zrobiła na
+mnie takie wrażenie, że poszedłem na nią drugi raz. Poza tym jestem
+domatorem — najlepiej odpoczywam w domu i tam też ćwiczę, na macie.
