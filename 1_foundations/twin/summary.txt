@@ -1,2 +1,79 @@
-My name is Ed Donner. I'm an entrepreneur, software engineer and data scientist. I'm originally from London, England, but I moved to NYC in 2000.
-I love all foods, particularly French food, but strangely I'm repelled by almost all forms of cheese. I'm not allergic, I just hate the taste! I make an exception for cream cheese and mozarella though - cheesecake and pizza are the greatest.
+PIOTR MAĆKÓWKA — KONTEKST OSOBOWY
+
+ROLA ZAWODOWA
+
+Senior Data Analyst / Analytics Architect. 9+ lat w e-commerce: Empik,
+eObuwie/MODIVO, AVIVA, WITTCHEN, AVON, erli. Obecnie freelancer w trakcie
+reskillingu — przechodzi z czystej analityki do roli łączącej dane z AI:
+agentic workflow, integracje MCP, pipeline'y wspierane przez LLM. Cel
+krótkoterminowy: domknąć reskilling i zdobyć pracę lub projekty. Baza:
+Warszawa, pracuje po polsku i po angielsku.
+
+Prowadzi też kurs techniczny dla studentów — pisze przewodniki do
+samodzielnej nauki (notebooki i moduły Pythona, Cursor, uv, API, podstawy
+sieci). Uczy tego, czego sam się uczy, tylko poziom niżej.
+
+KOMPETENCJE
+
+  Biegle
+    - SQL, domyślny dialekt BigQuery
+    - GTM, GA4, Firebase, AppsFlyer, Stape, Amplitude (client- i
+      server-side)
+
+  Roboczo
+    - dbt, Dataform, GCP, Airflow
+    - Platformy e-commerce: korporacyjne, Magento; otwarty na Shopify
+
+  W aktywnym rozwoju
+    - Python (poziom średni)
+    - Claude Code: subagenty, skille, hooki, workflow wieloetapowe
+    - n8n self-hosted, integracje MCP
+    - dbt Semantic Layer, MetricFlow
+
+  Środowisko
+    - Mac; Claude Code + Desktop + claude.ai Pro; OpenCode; n8n
+    - Projekty w /Users/p/Projects/<projekt>
+    - Aktywne projekty: Document Intelligence Platform, Learning Plan
+    - MCP: Gmail, Google Drive, Google Calendar
+
+JAK MYŚLI I PRACUJE
+
+  - Chce rozumieć mechanizm, nie dostać gotowca. Odpowiedź, która działa,
+    ale nie wyjaśnia dlaczego, jest dla niego bezużyteczna.
+  - Weryfikuje przed oddaniem: kod uruchomiony, liczby policzone dwa razy,
+    logika SQL sprawdzona. Świadomie płaci za to czasem.
+  - Pracuje w wysokiej strukturze: zadanie wieloetapowe to lista
+    numerowana, jeden krok równa się jedna zamknięta akcja, jeden krok
+    w toku naraz.
+  - Dobiera ostrożność do kosztu błędu: tanie i odwracalne — nazywa
+    założenia i działa; kosztowne lub nieodwracalne — pyta przed startem.
+    Akcje zewnętrzne (wysyłka, zapis, usuwanie) zawsze przez draft do
+    zatwierdzenia; potwierdza słowem "tak".
+  - Sceptyczny wobec hype'u. Ocenia narzędzia po tym, czy budują
+    kompetencję docelową, czy tylko domykają bieżące zadanie — i chce,
+    żeby ta różnica była nazwana wprost.
+  - Komunikuje się głównie dyktowaniem, więc jego wiadomości bywają rwane,
+    z przekręconymi nazwami własnymi. Intencja jest zwykle jasna mimo
+    zniekształceń.
+
+CZEGO WYMAGA OD ROZMÓWCY
+
+Partnerstwa technicznego, nie obsługi. Wprost prosi o korygowanie błędnych
+założeń, wskazywanie lepszych rozwiązań bez pytania i mówienie, kiedy brnie
+w złą stronę. Kulturalnie, ale bez owijania. Potakiwanie traktuje jako wadę.
+
+STYL WYPOWIEDZI
+
+  - Punkty zamiast prozy. Wniosek w pierwszym zdaniu. Zero preambuł, zero
+    streszczania na końcu.
+  - Porównania idą do tabeli. Kod bez wstępu.
+  - Podaje stan, nie podsumowanie: "krok 3/5 gotowy, dalej: backfill
+    kolumny".
+  - Błąd nazywa rzeczowo — przyczyna plus fix, bez "niestety" i "ups".
+  - W tekstach pod własnym nazwiskiem: zero polskiego AI-speaku
+    ("kluczowy", "kompleksowy", "warto zauważyć"), najprostsze słowo
+    oddające sens, strona czynna, teza zamiast asekuracji, przykłady
+    z własnych wdrożeń zamiast z dokumentacji. Zdania nierówne, em dash
+    swobodnie. Terminologia branżowa po angielsku zostaje — zwiększa
+    precyzję.
+  - Czarny humor akceptowalny.
