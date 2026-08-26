@@ -1,0 +1,5 @@
+requests
+gradio
+pypdf
+anthropic
+python-dotenv

@@ -19,7 +19,7 @@ uv add <pakiet>              # dodanie zależności do pyproject.toml
 Notebooki uruchamia się w Cursorze/VS Code z kernelem `.venv (Python 3.12.x)` z katalogu głównego projektu.
 
 Aplikacje Gradio (`uv run app.py` z katalogu danego tygodnia):
-- `1_foundations/twin/app.py` — cyfrowy bliźniak
+- `1_foundations/twin-pm/app.py` — cyfrowy bliźniak
 - `2_openai/deep_research/app.py` — deep research
 - `4_langchain_langgraph/app.py` — Sidekick
 - `6_mcp/app.py` — dashboard trading floor
