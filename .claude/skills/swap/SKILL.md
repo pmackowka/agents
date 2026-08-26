@@ -22,14 +22,18 @@ Komentarze wewnątrz komórek kodu (linie zaczynające się od `#`) aktualizuj t
 
 To samo dotyczy tekstu wewnątrz stringów wysyłanych do modelu — patrz pierwszy punkt w „Konwencje konwersji specyficzne dla tego repo” niżej (**„Tłumacz WSZYSTKIE prompty...”**). To jedna z łatwiej gubionych reguł tego skilla — sprawdź ją jawnie przy każdym pliku, nie tylko przy pierwszym przejściu.
 
-## Komentarze edukacyjne, linijka po linijce
+## Komentarze edukacyjne, PRZY KAŻDEJ LINIJCE
 
-Przy każdej konwersji dopisuj komentarze PL tłumaczące, co robi dana linijka kodu — to zachowanie domyślne przy KAŻDYM swapie, nie tylko na wyraźną prośbę Piotra przy danym pliku. Cel: Piotr ma rozumieć mechanizm API Anthropic, nie tylko dostać działający kod (patrz `CLAUDE.md` użytkownika — „Tłumacz mechanizm, nie gotowiec — chcę rozumieć, nie kopiować”).
+Przy każdej konwersji dopisuj komentarz PL do KAŻDEJ linijki kodu w komórce, którą tworzysz lub edytujesz w ramach swapu — nie tylko do wybranych "ważniejszych" linii, i nie tylko jeden zbiorczy komentarz na początku komórki. To zachowanie domyślne przy KAŻDYM swapie, nie tylko na wyraźną prośbę Piotra przy danym pliku. Cel: Piotr ma rozumieć mechanizm API Anthropic linia po linii, nie tylko dostać działający kod z jednym wyjaśnieniem na całą komórkę (patrz `CLAUDE.md` użytkownika — „Tłumacz mechanizm, nie gotowiec — chcę rozumieć, nie kopiować”).
 
-- Dotyczy każdej nietrywialnej linii w komórce, którą tworzysz lub edytujesz w ramach swapu: inicjalizacja klienta, wywołanie `.create()` i jego parametry, parsowanie odpowiedzi, pętla tool-use, budowanie `messages`, `system=`, itd.
+Realny problem z sesji referencyjnej: przy swapie `4_lab4.pl.ipynb` funkcja `chat()` dostała komentarze tylko przy części linii (inicjalizacja `messages`, pierwsze wywołanie `.create()`, warunek `while`) — linie takie jak `tool_calls = [block for block in response.content if block.type == "tool_use"]`, `results = handle_tool_calls(tool_calls)`, drugie wywołanie `.create()` w pętli czy końcowe `return` zostały bez komentarza. Stara reguła „nietrywialne linie” w praktyce zostawiała dziury, bo model sam oceniał, co jest nietrywialne, i oceniał zbyt oszczędnie. Nie powtarzaj tego: licz linie, nie oceniaj ich wagę.
+
+- Domyślnie KAŻDA linia kodu w edytowanej/tworzonej komórce dostaje komentarz PL — inline (na końcu linii) albo bezpośrednio nad nią, jeśli inline nie mieści się sensownie (bardzo długa linia, wieloliniowy literał/dict).
+- Jedyne linie zwolnione z komentarza: puste linie i samodzielna zamykająca klamra/nawias/cudzysłów (`}`, `)`, `"""`) bez treści obok. Pojedynczy `import` biblioteki standardowej bez znaczenia API-specyficznego (`import os`, `import json`) można zostawić bez komentarza — ale import samego SDK (`from anthropic import Anthropic`) NIE jest zwolniony, bo to właśnie punkt, w którym Piotr uczy się konwencji Anthropic.
+- Komentarz ma tłumaczyć PO CO/CO ROBI linia w kontekście API Anthropic (np. dlaczego `max_tokens` jest wymagany, po co `system=` jako osobny parametr, dlaczego wynik trafia do listy `tool_results` zamiast bezpośrednio do `messages`) — nie parafrazuj składnię słowo w słowo.
 - To dokładanie NOWYCH komentarzy tam, gdzie ich brakuje — osobna sprawa od reguły wyżej (aktualizacja istniejących komentarzy, które stały się nieprawdziwe po zmianie providera). Obie reguły obowiązują równolegle.
-- Nie komentuj oczywistości bez wartości informacyjnej (np. `import json` nie potrzebuje `# importuje json`) — komentarz ma tłumaczyć PO CO/CO ROBI linia w kontekście API (np. dlaczego `max_tokens` jest wymagany, po co `system=` jako osobny parametr), nie parafrazować składnię słowo w słowo.
-- Nie dubluj komentarza, jeśli linia już ma sensowny, aktualny komentarz PL — dopisuj tylko tam, gdzie brakuje albo gdzie istniejący jest nieadekwatny.
+- Nie dubluj komentarza, jeśli linia już ma sensowny, aktualny komentarz PL — zostaw go, chyba że stał się nieadekwatny po zmianie kodu.
+- **Po skończonej edycji komórki przejrzyj ją linia po linii i sprawdź, że każda niezwolniona linia ma komentarz** — nie polegaj na tym, że "komentarze dodały się przy okazji pisania kodu". To osobny krok, wykonaj go świadomie, tak jak `## Weryfikacja po edycji` niżej dla składni.
 - Nie dotyczy komórek-ćwiczeń z celowo niepełnym kodem (patrz wyżej) — tam nadal obowiązuje zakaz dotykania logiki; dozwolona tylko aktualizacja istniejącego komentarza nazywającego starego providera, nie dopisywanie nowych wyjaśnień, które ułatwiłyby rozwiązanie ćwiczenia.
 
 ## Konwencje konwersji specyficzne dla tego repo
