@@ -1,4 +1,4 @@
-"""Styling constants for the digital twin Gradio app."""
+"""Stałe stylistyczne dla aplikacji Gradio cyfrowego bliźniaka."""
 
 GOLD = "#ecad0a"
 BLUE = "#209dd7"
@@ -25,8 +25,8 @@ CSS = """
   --twin-muted: #8c8c95;
 }
 
-/* Light mode: Gradio adds `.dark` to <body> when dark; absence = light.
-   Only the neutral palette flips — gold/blue/purple accents stay identical. */
+/* Tryb jasny: Gradio dodaje `.dark` do <body> w trybie ciemnym; brak klasy = jasny.
+   Zmienia się tylko paleta neutralna — akcenty gold/blue/purple zostają identyczne. */
 body:not(.dark) {
   --twin-bg: #f4f4f6;
   --twin-surface: #ffffff;
@@ -41,7 +41,7 @@ footer, .built-with, .show-api, .api-docs { display: none !important; }
 
 html, body, gradio-app { background: var(--twin-bg) !important; }
 
-/* ---------- Stable layout ---------- */
+/* ---------- Stabilny układ ---------- */
 .gradio-container {
   background: var(--twin-bg) !important;
   color: var(--twin-text) !important;
@@ -59,7 +59,7 @@ html, body, gradio-app { background: var(--twin-bg) !important; }
 }
 .gradio-container * { min-width: 0; }
 
-/* ---------- Title ---------- */
+/* ---------- Tytuł ---------- */
 .gradio-container h1 {
   color: var(--twin-text) !important;
   font-size: 26px !important;
@@ -71,17 +71,17 @@ html, body, gradio-app { background: var(--twin-bg) !important; }
   text-align: left !important;
 }
 
-/* ---------- Sharp corners on structural pieces ---------- */
+/* ---------- Ostre rogi na elementach strukturalnych ---------- */
 .chatbot, .chatbot *, .block, .form,
 button, input, textarea,
 .examples button {
   border-radius: 0 !important;
 }
 
-/* ---------- Block surfaces ---------- */
+/* ---------- Powierzchnie bloków ---------- */
 .block, .form { background: transparent !important; box-shadow: none !important; }
 
-/* ---------- Hide the Chatbot label / header strip ---------- */
+/* ---------- Ukrycie etykiety/paska nagłówka komponentu Chatbot ---------- */
 .chatbot > .block-label,
 .chatbot > label,
 .chatbot .label-wrap,
@@ -90,7 +90,7 @@ button, input, textarea,
   display: none !important;
 }
 
-/* ---------- Chatbot frame ---------- */
+/* ---------- Ramka Chatbota ---------- */
 .chatbot, .chatbot.block {
   background: var(--twin-surface) !important;
   border: 1px solid var(--twin-border) !important;
@@ -99,7 +99,7 @@ button, input, textarea,
 }
 .chatbot .placeholder, .chatbot .placeholder * { color: var(--twin-muted) !important; }
 
-/* ---------- Message rows: strip parent backgrounds ---------- */
+/* ---------- Wiersze wiadomości: usunięcie tła elementów nadrzędnych ---------- */
 .message-row,
 .message-row > div,
 .message-row .role,
@@ -109,7 +109,7 @@ button, input, textarea,
   box-shadow: none !important;
 }
 
-/* ---------- Reset borders on every bubble variant first ---------- */
+/* ---------- Reset obramowań na każdym wariancie dymka ---------- */
 .message-row .message,
 .message-row .message-bubble,
 .message-row .bubble {
@@ -118,7 +118,7 @@ button, input, textarea,
   padding: 6px 10px !important;
 }
 
-/* ---------- Bubble backgrounds (broad to cover Gradio variants) ---------- */
+/* ---------- Tła dymków (szeroko, żeby objąć warianty Gradio) ---------- */
 .message-row.user-row .message,
 .message-row.user-row .message-bubble,
 .message-row.user-row .bubble,
@@ -137,10 +137,10 @@ button, input, textarea,
   color: var(--twin-text) !important;
 }
 
-/* ---------- Purple stripe ----------
-   Apply to every common bubble class for assistant rows (we don't know which
-   one the running Gradio uses), then suppress on any *nested* instance so the
-   stripe lands on the outermost matching element only — exactly one stripe. */
+/* ---------- Fioletowy pasek ----------
+   Zastosuj do każdej typowej klasy dymka dla wierszy asystenta (nie wiemy, której
+   akurat używa uruchomione Gradio), potem wyłącz na każdej *zagnieżdżonej* instancji,
+   żeby pasek trafiał tylko na najbardziej zewnętrzny pasujący element — dokładnie jeden pasek. */
 .message-row.bot-row .message,
 .message-row.bot-row .bubble,
 .message-row.bot-row .message-bubble,
@@ -171,9 +171,9 @@ button, input, textarea,
   border-left: 0 !important;
 }
 
-/* ---------- Uniform font size in bubbles ----------
-   The "first paragraph different size" was caused by a leaky `.prose p:first-of-type`
-   selector. Force every paragraph in a bubble to the same size. */
+/* ---------- Jednolity rozmiar czcionki w dymkach ----------
+   "Inny rozmiar pierwszego akapitu" był efektem przeciekającego selektora
+   `.prose p:first-of-type`. Wymuś ten sam rozmiar na każdym akapicie w dymku. */
 .message-row .message,
 .message-row .message-bubble,
 .message-row .bubble {
@@ -194,7 +194,7 @@ button, input, textarea,
 .message-row .bubble p:last-child,
 .message-row .prose p:last-child { margin-bottom: 0 !important; }
 
-/* Strip stray internal borders/backgrounds from anything inside a bubble */
+/* Usuń przypadkowe wewnętrzne obramowania/tła z czegokolwiek wewnątrz dymka */
 .message-row .message *,
 .message-row .message-bubble *,
 .message-row .bubble * {
@@ -209,7 +209,7 @@ button, input, textarea,
   text-decoration: underline;
 }
 
-/* ---------- Input row alignment ---------- */
+/* ---------- Wyrównanie wiersza z polem input ---------- */
 .input-row,
 .gr-input-row,
 .chat-input-row,
@@ -232,7 +232,7 @@ textarea:focus, input[type="text"]:focus {
 }
 textarea::placeholder, input::placeholder { color: var(--twin-muted) !important; }
 
-/* ---------- Buttons ---------- */
+/* ---------- Przyciski ---------- */
 button {
   font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace !important;
   letter-spacing: 0.12em !important;
@@ -278,7 +278,7 @@ button.lg.primary:hover {
   color: #111111 !important;
 }
 
-/* ---------- Submit-button icon: center vertically and size correctly ---------- */
+/* ---------- Ikona przycisku submit: wyśrodkowanie pionowe i poprawny rozmiar ---------- */
 button.submit svg,
 button.submit-button svg,
 .submit-button svg,
@@ -294,7 +294,7 @@ button[variant="primary"] svg {
   stroke: currentColor !important;
 }
 
-/* ---------- Examples ---------- */
+/* ---------- Przykłady ---------- */
 .examples, .examples-holder, [data-testid="examples"] {
   background: transparent !important;
   padding: 0 !important;
@@ -322,7 +322,7 @@ button[variant="primary"] svg {
   background: var(--twin-surface) !important;
 }
 
-/* ---------- Icon buttons (clear, retry, copy) ---------- */
+/* ---------- Przyciski-ikony (clear, retry, copy) ---------- */
 .icon-button, .chatbot .icon-button {
   color: var(--twin-muted) !important;
   background: transparent !important;
@@ -336,16 +336,16 @@ button[variant="primary"] svg {
 }
 .icon-button:hover, .chatbot .icon-button:hover { color: var(--twin-gold) !important; }
 
-/* ---------- Scrollbar ---------- */
+/* ---------- Pasek przewijania ---------- */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--twin-bg); }
 ::-webkit-scrollbar-thumb { background: var(--twin-border-strong); }
 ::-webkit-scrollbar-thumb:hover { background: var(--twin-purple); }
 
-/* ---------- Selection ---------- */
+/* ---------- Zaznaczenie tekstu ---------- */
 ::selection { background: var(--twin-gold); color: #111111; }
 
-/* ---------- Mobile ---------- */
+/* ---------- Urządzenia mobilne ---------- */
 @media (max-width: 640px) {
   .gradio-container { padding: 22px 14px 36px !important; }
   .gradio-container h1 { font-size: 22px !important; }
@@ -362,8 +362,8 @@ JS = """
   };
   setTimeout(focusInput, 300);
 
-  // Re-focus the message field whenever Gradio re-enables it
-  // (i.e. after the assistant finishes responding).
+  // Ponownie ustaw fokus na polu wiadomości, gdy Gradio je odblokuje
+  // (czyli po tym, jak asystent skończy odpowiadać).
   const watchTextarea = (area) => {
     if (area.dataset.twinWatched) return;
     area.dataset.twinWatched = '1';

@@ -22,14 +22,14 @@ def push(text):  # wysyła powiadomienie push na telefon
     )
 
 
-def record_user_details(email, name="Name not provided", notes="not provided"):  # narzędzie wywoływane przez Claude, gdy użytkownik chce zostawić kontakt
-    push(f"Recording interest from {name} with email {email} and notes {notes}")  # powiadamia Piotra push-em o nowym kontakcie
-    return "OK"  # zwracany tekst trafia do tool_result i wraca do Claude
+def record_user_details(email, name="Imię nie podane", notes="brak"):  # narzędzie wywoływane przez Claude, gdy użytkownik chce zostawić kontakt - defaulty widoczne w puszu, jeśli Claude ich nie poda
+    push(f"Zapisano zainteresowanie od {name}, email {email}, notatki: {notes}")  # treść powiadomienia push - to Piotr czyta na telefonie, więc po polsku
+    return "Zapisano"  # zwracany tekst trafia do tool_result i wraca do Claude
 
 
 def record_unknown_question(question):  # narzędzie wywoływane przez Claude, gdy nie zna odpowiedzi
-    push(f"Recording {question} asked that I couldn't answer")  # powiadamia Piotra push-em o pytaniu bez odpowiedzi
-    return "OK"  # zwracany tekst trafia do tool_result i wraca do Claude
+    push(f"Zapisano pytanie bez odpowiedzi: {question}")  # treść powiadomienia push - to Piotr czyta na telefonie, więc po polsku
+    return "Zapisano"  # zwracany tekst trafia do tool_result i wraca do Claude
 
 
 record_user_details_json = {  # definicja narzędzia record_user_details w formacie Anthropic
@@ -78,7 +78,7 @@ def handle_tool_calls(tool_calls):  # przetwarza wszystkie bloki tool_use z jedn
         arguments = tool_call.input  # input jest już sparsowanym dict, nie JSON-stringiem jak tool_call.function.arguments w OpenAI
         print(f"Tool called: {tool_name}", flush=True)  # log do konsoli, bez zmian względem OpenAI
         tool = tool_map.get(tool_name)  # znajdź właściwą funkcję Pythona po nazwie narzędzia
-        result = tool(**arguments) if tool else "Unknown tool: " + tool_name  # wywołaj funkcję z rozpakowanymi argumentami
+        result = tool(**arguments) if tool else "Nieznane narzędzie: " + tool_name  # wywołaj funkcję z rozpakowanymi argumentami - tekst błędu też trafia do Claude jako tool_result
         results.append({  # dokłada blok tool_result do listy wyników
             "type": "tool_result",  # Anthropic identyfikuje wynik po type, nie po roli "tool" jak w OpenAI
             "tool_use_id": tool_call.id,  # musi się zgadzać z id bloku tool_use, żeby Claude powiązał wynik z wywołaniem
