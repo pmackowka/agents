@@ -54,6 +54,10 @@ Szczegóły są [tutaj](guides/09_ai_apis_and_ollama.ipynb).
 
 Koniecznie monitoruj swoje koszty API, żeby mieć pewność, że jesteś w pełni zadowolony z wydatków. Dla OpenAI panel jest [tutaj](https://platform.openai.com/usage).
 
+### Pochodzenie tego repozytorium
+
+To fork kursu [ed-donner/agents](https://github.com/ed-donner/agents), rozwijany dalej pod moje potrzeby: przewodniki i laby z `1_foundations` przetłumaczone na polski (kopie `.pl.ipynb`), część labów przepisana z OpenAI SDK na Anthropic SDK (Claude), plus własne skille i workflow dla Claude Code do obsługi tych konwersji. Reszta kursu (tygodnie 2-6) zostaje w oryginalnej wersji Eda, chyba że commit mówi inaczej.
+
 ### PONAD WSZYSTKO -
 
 Koniecznie baw się dobrze podczas kursu! Nie mogłeś wybrać lepszego momentu na naukę Agentic AI. Mam nadzieję, że każda minuta sprawi Ci radość! A jeśli w którymś momencie utkniesz - [skontaktuj się ze mną](https://www.linkedin.com/in/eddonner/).
