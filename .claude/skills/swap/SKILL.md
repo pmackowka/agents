@@ -42,6 +42,16 @@ Nie powtarzaj żadnego z tych dwóch: licz linie w całym pliku, nie oceniaj ich
 - To dokładanie NOWYCH komentarzy tam, gdzie ich brakuje — osobna sprawa od reguły wyżej (aktualizacja istniejących komentarzy, które stały się nieprawdziwe po zmianie providera). Obie reguły obowiązują równolegle.
 - Nie dubluj komentarza, jeśli linia już ma sensowny, aktualny komentarz PL — zostaw go, chyba że stał się nieadekwatny po zmianie kodu.
 - **Po skończonej edycji przejrzyj CAŁY plik/komórkę linia po linii i sprawdź, że każda niezwolniona linia ma komentarz** — łącznie z fragmentami, których nie dotknąłeś w diffie. Nie polegaj na tym, że "komentarze dodały się przy okazji pisania kodu". To osobny krok, wykonaj go świadomie, tak jak `## Weryfikacja po edycji` niżej dla składni.
+- **Nagłówek każdej komórki/pliku objętego swapem to blok 5 zdań (4-6, nie mniej nie więcej), nie jedno zdanie.** Pierwsza linia nie może być pojedynczym, skrótowym komentarzem w stylu `# Definicje narzędzi w formacie Anthropic (input_schema, nie parameters jak w OpenAI)`. Rozpisz to na kilka linii komentarza (każda zaczyna się od `#`), łącznie 5 zdań po polsku: co robi kod w tej komórce, po co, jakie dane wejściowe/wyjściowe, i — skoro to swap — czym różni się od odpowiednika OpenAI, jeśli różnica akurat w tej komórce występuje. Przykład:
+  ```python
+  # Definicje narzędzi w formacie Anthropic. Anthropic używa klucza input_schema zamiast parameters z OpenAI.
+  # Każde narzędzie to osobny słownik z nazwą, opisem czytanym przez Claude i schematem argumentów w JSON Schema.
+  # create_checklist_json opisuje narzędzie tworzące nową checklistę z listy opisów kroków.
+  # mark_complete_json opisuje narzędzie oznaczające pojedynczy krok jako ukończony, po jego indeksie.
+  # Obie definicje trafiają razem do listy tools, przekazywanej potem do messages.create().
+  create_checklist_json = {
+  ```
+  Dotyczy TYLKO nagłówka (pierwszych kilku linii komórki/pliku) — resztę komentujesz dalej linia po linii, zgodnie z regułą wyżej, bez rozdymania każdej linii do 5 zdań.
 - Nie dotyczy komórek-ćwiczeń z celowo niepełnym kodem (patrz wyżej) — tam nadal obowiązuje zakaz dotykania logiki; dozwolona tylko aktualizacja istniejącego komentarza nazywającego starego providera, nie dopisywanie nowych wyjaśnień, które ułatwiłyby rozwiązanie ćwiczenia.
 
 ## Konwencje konwersji specyficzne dla tego repo

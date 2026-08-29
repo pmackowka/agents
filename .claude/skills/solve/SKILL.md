@@ -37,6 +37,16 @@ Treść komórki "Ćwiczenie" mówi dokładnie, ile wywołań LLM potrzeba i jak
 - Komentarze w kodzie i treść promptów przekazywanych do modelu piszesz po polsku (ten notatnik jest już po polsku w całości — markdown, komentarze i prompty). Nazwy zmiennych, funkcji, kluczy słowników i wywołania API zostają w oryginalnej, angielskiej składni.
 - **Komentuj każdą znaczącą linijkę kodu, nie tylko definicje funkcji.** Oryginalne komórki tych notatników komentują niemal każdą linię inline (`kod  # komentarz po polsku`) — przypisania, wywołania, `return`, `import`, warunki. Trzymaj tę samą gęstość w swoim rozwiązaniu. Wyjątek: gołe otwarcia bloków bez własnej treści (`else:`, `try:`, `except X:`, puste linie) można zostawić bez komentarza — komentarz i tak wisi już przy linii z kodem wewnątrz tego bloku.
 - Do wyświetlenia finalnego wyniku użyj `display(Markdown(...))`, jeśli `from IPython.display import Markdown, display` już wystąpiło wcześniej w notatniku (prawie zawsze tak) — nie importuj ponownie, po prostu użyj.
+- **Nagłówek każdej komórki kodu to blok 5 zdań (4-6, nie mniej nie więcej), nie jedno zdanie.** Pierwsza linia komórki nie może być pojedynczym, skrótowym komentarzem w stylu `# Definicje narzędzi w formacie Anthropic (input_schema, nie parameters jak w OpenAI)`. Zamiast tego rozpisz to na kilka linii komentarza (każda zaczyna się od `#`), łącznie 5 zdań po polsku, wyjaśniających CO robi kod w tej komórce i PO CO — np. jaki jest jego cel w całym rozwiązaniu, jakie dane wejściowe/wyjściowe, dlaczego akurat taki kształt. Przykład:
+  ```python
+  # Definicje narzędzi w formacie Anthropic. Anthropic używa klucza input_schema zamiast parameters z OpenAI.
+  # Każde narzędzie to osobny słownik z nazwą, opisem czytanym przez Claude i schematem argumentów w JSON Schema.
+  # create_checklist_json opisuje narzędzie tworzące nową checklistę z listy opisów kroków.
+  # mark_complete_json opisuje narzędzie oznaczające pojedynczy krok jako ukończony, po jego indeksie.
+  # Obie definicje trafiają razem do listy tools, przekazywanej potem do messages.create().
+  create_checklist_json = {
+  ```
+  Ta zasada dotyczy TYLKO nagłówka komórki (pierwszych kilku linii) — resztę komórki komentujesz dalej zgodnie z regułą wyżej (komentarz przy każdej znaczącej linii), bez rozdymania każdej linii do 5 zdań.
 
 ## Wstawianie kilku nowych komórek NotebookEdit — sposób bez zgadywania ID
 
